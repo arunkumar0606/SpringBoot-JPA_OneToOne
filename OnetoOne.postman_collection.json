@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "bbea4ce4-ac4e-44fd-b1cb-f44335a06365",
+		"name": "OnetoOne",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33957944"
+	},
+	"item": [
+		{
+			"name": "Add customers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"empID\":22,\r\n        \"name\":\"Arun\",\r\n        \"email\":\"arun@gamil.com\",\r\n        \"address\":\r\n            {\r\n                \"addressId\":44,\r\n                \"city\":\"cheennai\",\r\n                \"country\":\"india\"\r\n            }\r\n        \r\n\r\n        \r\n    },\r\n    {\r\n        \"empID\":43,\r\n        \"name\":\"ammu\",\r\n        \"email\":\"ammu@gamil.com\",\r\n        \"address\":\r\n            {\r\n                \"addressId\":99,\r\n                \"city\":\"banglore\",\r\n                \"country\":\"india\"\r\n            }\r\n        \r\n    }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addEmployees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addEmployees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Address",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"addressId\":11,\r\n        \"city\":\"pollachi\",\r\n        \"country\":\"india\",\r\n        \"employee\":{\r\n            \"empID\":46,\r\n            \"name\":\"bino\",\r\n            \"email\":\"bino@gamil.com\"\r\n        }\r\n    },\r\n    {\r\n        \"addressId\":122,\r\n        \"city\":\"marhtahalli\",\r\n        \"country\":\"india\",\r\n        \"employee\":{\r\n            \"empID\":93,\r\n            \"name\":\"barath\",\r\n            \"email\":\"barath@gamil.com\"\r\n        }\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addAddress",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addAddress"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
